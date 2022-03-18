@@ -1,0 +1,54 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: i3city-evo-dgraphmongo
+    enable-auth: true
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://cc.qk0.cc:13307/i3city_evo01?useUnicode=true&useSSL=false&serverTimezone=Hongkong
+#    username: root
+#    password: woxnskzhcs!
+#    hikari:
+#      aximum-pool-size: 10
+#      minimum-idle: 5
+#      max-lifetime: 0
+#      connection-test-query: select 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+  servlet:
+    multipart:
+      max-request-size: 4000MB
+      max-file-size: 4000MB
+  data:
+    mongodb:
+      host: 162.105.88.139
+      #      host: 192.168.249.10
+      #      host: 10.10.11.157
+      port: 27032
+      database: relation
+      username: rootxyx
+      password: woxnsk!
+
+server:
+  port: 9135
+
+ribbon:
+  ReadTimeout: 2200000
+  ConnectTimeout: 600000
+
+dgraph:
+  host: 162.105.88.139
+  ##  host: 192.168.249.10
+  #  port: 19482
+  #  host: 10.10.11.157
+  port: 9084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://cc.qk0.cc:8761/eureka/
+  instance:
+    hostname: cc.qk0.cc

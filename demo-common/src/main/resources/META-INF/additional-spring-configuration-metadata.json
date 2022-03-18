@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "dgraph.host",
+      "type": "java.lang.String",
+      "description": "Description for dgraph.host."
+  }
+] }
